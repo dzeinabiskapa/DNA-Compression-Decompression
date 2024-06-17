@@ -129,18 +129,15 @@ public class Main {
     while (!command.equals("exit")) {
       String[] splitCommand = command.split(" ", 2);
 
-      // Handle the 'comp' command
       if (splitCommand[0].equals("comp")) {
         String compInput = splitCommand[1];
         String[] result = comp(compInput);
         String resultString = String.join(" ", result).trim();
         System.out.println(resultString);
 
-      // Handle the 'about' command
       } else if (command.equals("about")) {
-        System.out.println("191RBC018 Džeina Bīskapa 10.grupa");
+        System.out.println("Author: Džeina Bīskapa");
 
-      // Handle the 'decomp' command
       } else if (splitCommand[0].equals("decomp")) {
         String splitLength = splitCommand[1];
         String[] splitBytes = splitLength.split(" ", 2);
@@ -158,7 +155,6 @@ public class Main {
           System.out.println("wrong command format");
         }
 
-      // Handle invalid commands
       } else {
         System.out.println("wrong command");
       }
